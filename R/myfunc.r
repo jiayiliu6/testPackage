@@ -12,26 +12,3 @@ myfunc <- function(a, b) {
   result <- a * b + a
   return(result)
 }
-
-#' My second function
-#'
-#' @param y A numerical vector.
-#' @param X A numerical matrix.
-#'
-#' @return A numerical vector of (x'x)^-1*(x'y).
-#' @export
-
-estimate_beta <- function(y, X) {
-  beta_hat <- (solve(t(X) %*% X)) %*% (t(X) %*% y)
-  return(beta_hat)
-}
-
-#' My third function
-
-library(ggplot2)
-my_theme <- function() {
-  mytheme <- ggplot2::theme(legend.position = "inside",
-        panel.background = element_rect(fill = "grey90", colour = "black"),
-        axis.line = element_line(arrow = arrow())) 
-  return(mytheme)
-}
